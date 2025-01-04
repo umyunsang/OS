@@ -4,20 +4,20 @@
 
 //구조체 선언
 typedef struct Process {
-     int Process_num; //프로세스 번호
-     int Start_time; //시작시간
-     int Work_time; //작동시간
-     int End_time; //종료시간(바로 시작시 Start + Work & 큐에서 나올 경우 그 때 시간 + Work_time
-     int Process_Size; //프로세스의 크기
-     int Flag; //0 : 할당x, 1 : 할당o, 2 : 종료
-     Process* Next; //큐를 만들기 위해 필요한 포인터
+    int Process_num; //프로세스 번호
+    int Start_time; //시작시간
+    int Work_time; //작동시간
+    int End_time; //종료시간(바로 시작시 Start + Work & 큐에서 나올 경우 그 때 시간 + Work_time
+    int Process_Size; //프로세스의 크기
+    int Flag; //0 : 할당x, 1 : 할당o, 2 : 종료
+    Process* Next; //큐를 만들기 위해 필요한 포인터
 } Process;
 
  typedef struct Memory_Status {
-     int Adress; //주소
-     int PID_Process_num; //프로세스번호
-     int Process_Size; //Process_Size;
-     Memory_Status *R_link, *L_link;
+    int Adress; //주소
+    int PID_Process_num; //프로세스번호
+    int Process_Size; //Process_Size;
+    Memory_Status *R_link, *L_link;
 } Memory_Status;
 //구조체선언 끝
 
@@ -27,9 +27,9 @@ typedef struct Queue {
     int Queue_Count;
 } Queue;
 void Queue_inti(Queue* q) { //큐 초기화
-     q->front = NULL;
-     q->rear = NULL;
-     q->Queue_Count = 0;
+    q->front = NULL;
+    q->rear = NULL;
+    q->Queue_Count = 0;
 }
 
 void Queue_enQ(Queue* q, Process P) { //큐 삽입
